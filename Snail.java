@@ -20,28 +20,28 @@ public class Snail {
         if (array[0].length == 0) return new int[0];
         int tempLength = array.length;
         int length = array.length;
-        int arr1 []=new int [length*length];
-        int arr2 []=new int [length*length];
+        int [] arr1 =new int [length*length];
+        int [] arr2 =new int [length*length];
         for (int i=0;i<tempLength;i++){
             System.arraycopy(array[i],0,arr1,(length*i),array[i].length);
         }
         int counter1 = 0;
-        int counter2 = 0;
+        int counter2;
 
         for (int i = 0; i < array.length/2; i++){
 
-            int tempArray1 [] = method(arr1,tempLength);
+            int[] tempArray1 = method(arr1,tempLength);
 
-            for (int j=0; j < tempArray1.length ; j++){
+            for (int value : tempArray1) {
 
-                arr2[counter1]=tempArray1[j];
+                arr2[counter1] = value;
                 counter1++;
 
             }
 
             if (tempLength > 3){
 
-                int tempArray2 [] = new int[(tempLength-2)*(tempLength-2)];
+                int [] tempArray2 = new int[(tempLength-2)*(tempLength-2)];
                 counter2=0;
 
                 for (int j=0;j<tempLength-2;j++){
@@ -65,7 +65,7 @@ public class Snail {
         }
         return arr2;
     }
-    public static int [] method(int array [],int length){
+    public static int [] method(int [] array, int length){
         int [] tempArray = new int[(length*4)-4];
         int counter = 0;
         for (int i = 0 ;i < length ; i++){
