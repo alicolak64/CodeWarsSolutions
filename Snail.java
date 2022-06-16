@@ -1,5 +1,3 @@
-package CodeWarsSolutions;
-
 import java.util.Arrays;
 
 /**
