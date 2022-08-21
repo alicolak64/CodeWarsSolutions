@@ -1,4 +1,4 @@
-public class BasicOperations
+public class BasicMathematicalOperations
 {
   public static Integer basicMath(String op, int v1, int v2){
    
