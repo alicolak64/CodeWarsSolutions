@@ -1,4 +1,4 @@
-public class Isogram {
+public class Isograms {
 
     public static boolean  isIsogram(String str) {
 
